@@ -1,7 +1,7 @@
 FROM runpod/worker-comfyui:fix-network-volume-model-paths-base
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends build-essential && \
+    apt-get install -y --no-install-recommends build-essential python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /comfyui && \
